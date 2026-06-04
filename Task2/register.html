@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register — DevAssess</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="glow-orb top"></div>
+  <div class="glow-orb bot"></div>
+
+  <div class="card">
+    <div class="logo">
+      <div class="logo-icon">⚡</div>
+      <div class="logo-text">DevAssess</div>
+    </div>
+
+    <h1>Create account</h1>
+    <p class="subtitle">Join the development assessment platform</p>
+
+    <div id="alert" class="alert"></div>
+
+    <form id="register-form" onsubmit="handleRegister(event)">
+      <div class="form-group">
+        <label for="name">Full name</label>
+        <input type="text" id="name" placeholder="Ravi Kumar" autocomplete="name" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" placeholder="ravi@example.com" autocomplete="email" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Min. 6 characters" autocomplete="new-password" />
+      </div>
+      <div class="form-group">
+        <label for="confirm">Confirm password</label>
+        <input type="password" id="confirm" placeholder="Re-enter password" autocomplete="new-password" />
+      </div>
+      <button type="submit" class="btn">Create account →</button>
+    </form>
+
+    <p class="link-row">Already have an account? <a href="login.html">Sign in</a></p>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — DevAssess</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body { align-items: flex-start; padding: 2rem; }
+  </style>
+</head>
+<body>
+  <div class="glow-orb top"></div>
+  <div class="glow-orb bot"></div>
+
+  <div class="dash-layout">
+
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="logo">
+        <div class="logo-icon" style="width:30px;height:30px;font-size:15px;">⚡</div>
+        <div class="logo-text">DevAssess</div>
+      </div>
+      <div class="topbar-right">
+        <div style="text-align:right;">
+          <div style="font-size:0.88rem;font-weight:500;" id="user-name">—</div>
+          <div style="font-size:0.75rem;color:var(--muted);" id="user-email">—</div>
+        </div>
+        <div class="avatar" id="avatar">—</div>
+        <button class="btn-sm" onclick="logout()">Sign out</button>
+      </div>
+    </div>
+
+    <!-- Greeting -->
+    <div style="margin-bottom:1.5rem;">
+      <h1 style="font-size:1.8rem;" id="greeting">Good day 👋</h1>
+      <p style="color:var(--muted);font-size:0.9rem;margin-top:4px;">Here's your assessment overview</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">Assessment score</div>
+        <div class="stat-value blue" id="stat-score">0%</div>
+        <span class="stat-badge">↑ 4% this week</span>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Modules completed</div>
+        <div class="stat-value purple" id="stat-modules">0</div>
+        <span class="stat-badge">of 3 total</span>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Current streak</div>
+        <div class="stat-value green" id="stat-streak">0 days</div>
+        <span class="stat-badge">Keep it up!</span>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Status</div>
+        <div class="stat-value" style="font-size:1.2rem;margin-top:6px;">✅ Active</div>
+        <span class="stat-badge">Account verified</span>
+      </div>
+    </div>
+
+    <!-- Main panels -->
+    <div class="panels">
+
+      <!-- Activity feed -->
+      <div class="panel">
+        <div class="panel-title">Recent activity <span>last 7 days</span></div>
+        <div class="activity-item">
+          <div class="act-dot blue"></div>
+          <div class="act-text">Completed <strong>Registration Module</strong></div>
+          <div class="act-time">2h ago</div>
+        </div>
+        <div class="activity-item">
+          <div class="act-dot green"></div>
+          <div class="act-text">Passed <strong>Login Module</strong> assessment</div>
+          <div class="act-time">1d ago</div>
+        </div>
+        <div class="activity-item">
+          <div class="act-dot purple"></div>
+          <div class="act-text">Started <strong>Dashboard Module</strong></div>
+          <div class="act-time">1d ago</div>
+        </div>
+        <div class="activity-item">
+          <div class="act-dot blue"></div>
+          <div class="act-text">Account created successfully</div>
+          <div class="act-time">3d ago</div>
+        </div>
+        <div class="activity-item">
+          <div class="act-dot green"></div>
+          <div class="act-text">Profile setup completed</div>
+          <div class="act-time">3d ago</div>
+        </div>
+      </div>
+
+      <!-- Quick actions -->
+      <div class="panel">
+        <div class="panel-title">Quick actions</div>
+        <div class="quick-actions">
+          <button class="qa-btn" onclick="window.location.href='register.html'">
+            <span class="qa-icon">📝</span> View Registration module
+          </button>
+          <button class="qa-btn" onclick="window.location.href='login.html'">
+            <span class="qa-icon">🔐</span> View Login module
+          </button>
+          <button class="qa-btn">
+            <span class="qa-icon">📊</span> View score report
+          </button>
+          <button class="qa-btn">
+            <span class="qa-icon">📤</span> Export assessment
+          </button>
+          <button class="qa-btn" onclick="logout()" style="color:var(--danger);">
+            <span class="qa-icon">🚪</span> Sign out
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
